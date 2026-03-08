@@ -1,0 +1,30 @@
+class Vehicle {
+    void display() {
+        System.out.println("This is a Vehicle");
+    }
+}
+
+class Car extends Vehicle {
+    void show() {
+        System.out.println("This is a Car");
+    }
+}
+
+class Bike extends Vehicle {
+    void show() {
+        System.out.println("This is a a Bike");
+    }
+}
+
+public class VehicleInheritance {
+    public static void main(String[] args) {
+        Car c = new Car();
+        Bike b = new Bike();
+
+        c.display();
+        c.show();
+
+        b.display();
+        b.show();
+    }
+}
