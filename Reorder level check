@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class ReorderLevelCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int stock, reorderLevel;
+
+        System.out.print("Enter current stock: ");
+        stock = sc.nextInt();
+
+        System.out.print("Enter reorder level: ");
+        reorderLevel = sc.nextInt();
+
+        if (stock <= reorderLevel) {
+            System.out.println("Stock is low. Reorder required.");
+        } else {
+            System.out.println("Stock level is sufficient.");
+        }
+    }
+}
