@@ -1,0 +1,22 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class DatabaseExample {
+    public static void main(String[] args) {
+        try {
+            String url = "jdbc:mysql://localhost:3306/testdb";
+            String user = "root";
+            String password = "root";
+
+            Connection con = DriverManager.getConnection(url, user, password);
+
+            if (con != null) {
+                System.out.println("Database Connected Successfully");
+            }
+        } 
+        catch (Exception e) {
+            System.out.println("Connection Failed");
+            System.out.println(e);
+        }
+    }
+}
