@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class UniversityResult {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int m1, m2, m3, m4, m5;
+        int total;
+        double average;
+
+        System.out.print("Enter marks of 5 subjects: ");
+        m1 = sc.nextInt();
+        m2 = sc.nextInt();
+        m3 = sc.nextInt();
+        m4 = sc.nextInt();
+        m5 = sc.nextInt();
+
+        total = m1 + m2 + m3 + m4 + m5;
+        average = total / 5.0;
+
+        System.out.println("Total Marks: " + total);
+        System.out.println("Average: " + average);
+
+        if (average >= 75)
+            System.out.println("Result: Distinction");
+        else if (average >= 60)
+            System.out.println("Result: First Class");
+        else if (average >= 50)
+            System.out.println("Result: Second Class");
+        else if (average >= 40)
+            System.out.println("Result: Pass");
+        else
+            System.out.println("Result: Fail");
+    }
+}
