@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class BinaryPermission {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int permission;
+
+        System.out.print("Enter permission value (0-7): ");
+        permission = sc.nextInt();
+
+        if ((permission & 4) != 0) {
+            System.out.println("Read Permission: Yes");
+        } else {
+            System.out.println("Read Permission: No");
+        }
+
+        if ((permission & 2) != 0) {
+            System.out.println("Write Permission: Yes");
+        } else {
+            System.out.println("Write Permission: No");
+        }
+
+        if ((permission & 1) != 0) {
+            System.out.println("Execute Permission: Yes");
+        } else {
+            System.out.println("Execute Permission: No");
+        }
+    }
+}
