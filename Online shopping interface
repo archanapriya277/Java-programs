@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class OnlineShopping {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int choice;
+        double total = 0;
+
+        System.out.println("Online Shopping Menu");
+        System.out.println("1. T-Shirt - Rs.500");
+        System.out.println("2. Jeans - Rs.1000");
+        System.out.println("3. Shoes - Rs.1500");
+        System.out.print("Enter your choice: ");
+        choice = sc.nextInt();
+
+        switch(choice) {
+            case 1:
+                total = 500;
+                System.out.println("T-Shirt added to cart");
+                break;
+
+            case 2:
+                total = 1000;
+                System.out.println("Jeans added to cart");
+                break;
+
+            case 3:
+                total = 1500;
+                System.out.println("Shoes added to cart");
+                break;
+
+            default:
+                System.out.println("Invalid choice");
+        }
+
+        if(choice >= 1 && choice <= 3) {
+            System.out.println("Total Amount: Rs." + total);
+            System.out.println("Thank you for shopping!");
+        }
+    }
+}
