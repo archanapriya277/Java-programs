@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class TrafficSignalController {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int signal;
+
+        System.out.println("Enter Signal (1-Red, 2-Yellow, 3-Green): ");
+        signal = sc.nextInt();
+
+        switch(signal) {
+            case 1:
+                System.out.println("Red Signal - STOP");
+                break;
+
+            case 2:
+                System.out.println("Yellow Signal - WAIT");
+                break;
+
+            case 3:
+                System.out.println("Green Signal - GO");
+                break;
+
+            default:
+                System.out.println("Invalid Signal");
+        }
+    }
+}
