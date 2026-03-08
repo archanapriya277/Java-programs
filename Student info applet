@@ -1,0 +1,14 @@
+import java.applet.Applet;
+import java.awt.Graphics;
+
+/* <applet code="StudentInfo" width=300 height=200> </applet> */
+
+public class StudentInfo extends Applet {
+
+    public void paint(Graphics g) {
+        g.drawString("Student Information", 80, 40);
+        g.drawString("Name: Archu", 50, 80);
+        g.drawString("Roll No: 101", 50, 100);
+        g.drawString("Course: BCA", 50, 120);
+    }
+}
