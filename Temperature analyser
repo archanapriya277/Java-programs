@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class TemperatureAnalyser {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int temp;
+
+        System.out.print("Enter temperature: ");
+        temp = sc.nextInt();
+
+        if (temp < 20) {
+            System.out.println("Weather is Cold");
+        } 
+        else if (temp >= 20 && temp <= 35) {
+            System.out.println("Weather is Normal");
+        } 
+        else {
+            System.out.println("Weather is Hot");
+        }
+    }
+}
