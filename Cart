@@ -1,0 +1,24 @@
+import java.applet.Applet;
+import java.awt.*;
+import java.awt.event.*;
+
+public class CartApplet extends Applet implements ActionListener {
+
+    Button add;
+    int items = 0;
+
+    public void init() {
+        add = new Button("Add to Cart");
+        add(add);
+        add.addActionListener(this);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        items++;
+        repaint();
+    }
+
+    public void paint(Graphics g) {
+        g.drawString("Items in Cart: " + items, 50, 100);
+    }
+}
