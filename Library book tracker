@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class LibraryBookTracker {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int totalBooks = 100; // total books in library
+        int issued;
+
+        System.out.print("Enter number of books issued: ");
+        issued = sc.nextInt();
+
+        int available = totalBooks - issued;
+
+        System.out.println("Total Books: " + totalBooks);
+        System.out.println("Issued Books: " + issued);
+        System.out.println("Available Books: " + available);
+    }
+}
