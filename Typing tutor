@@ -1,0 +1,27 @@
+import java.applet.Applet;
+import java.awt.*;
+import java.awt.event.*;
+
+public class TypingTutor extends Applet implements KeyListener {
+
+    String text = "Type something...";
+    String typed = "";
+
+    public void init() {
+        addKeyListener(this);
+        setBackground(Color.white);
+    }
+
+    public void paint(Graphics g) {
+        g.drawString(text, 50, 50);
+        g.drawString("You typed: " + typed, 50, 100);
+    }
+
+    public void keyTyped(KeyEvent e) {
+        typed += e.getKeyChar();
+        repaint();
+    }
+
+    public void keyPressed(KeyEvent e) {}
+    public void keyReleased(KeyEvent e) {}
+}
